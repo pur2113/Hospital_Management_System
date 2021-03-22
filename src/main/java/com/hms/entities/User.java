@@ -51,8 +51,8 @@ public class User {
     List<Appointment> patientsAppointment;
 
     @OneToMany(mappedBy = "doctor")
-    List<Testimonial>  DoctorTestimonials;
+    List<Testimonial>  doctorTestimonials;
 
     @OneToMany(mappedBy = "patient")
-    List<Appointment> PatientTestimonials;
+    List<Testimonial> patientTestimonials;
 }
