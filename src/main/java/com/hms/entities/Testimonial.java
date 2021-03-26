@@ -5,13 +5,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Table(name = "Testimonial")
+@Table(name = "testimonial")
 public class Testimonial {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,4 +28,5 @@ public class Testimonial {
     User patient;
 
     private String review;
+
 }

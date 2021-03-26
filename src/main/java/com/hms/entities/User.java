@@ -25,19 +25,19 @@ public class User {
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "role",nullable = false)
+    @Column(name = "role",nullable = false, length = 10)
     private RoleType role;
 
-    @Column(name = "first_name", nullable = false)
+    @Column(name = "first_name", nullable = false, length = 20)
     private String firstName;
 
-    @Column(name = "last_name", nullable = false)
+    @Column(name = "last_name", nullable = false, length = 20)
     private String lastName;
 
-    @Column(name = "password", nullable = false)
+    @Column(name = "password", nullable = false, length = 64)
     private String password;
 
-    @Column(name = "email", nullable = false)
+    @Column(name = "email", nullable = false, length = 50)
     private String email;
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)

@@ -14,7 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Table(name = "Appointment")
+@Table(name = "appointment")
 public class Appointment {
 
     @Id
@@ -25,8 +25,10 @@ public class Appointment {
     private LocalDateTime date;
 
     @Enumerated(EnumType.STRING)
+    @Column(length = 15)
     private AppointmentStatus status;
 
+    @Column(length = 30)
     private String disease;
 
     @ManyToOne

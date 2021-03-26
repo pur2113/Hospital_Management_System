@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Test")
+@Table(name = "test")
 public class Test {
 
     @Id
@@ -18,7 +18,7 @@ public class Test {
     @Column(name = "test_id")
     private int testID;
 
-    @Column(name = "test_name")
+    @Column(name = "test_name", length = 30)
     private String testName;
 
     private int cost;

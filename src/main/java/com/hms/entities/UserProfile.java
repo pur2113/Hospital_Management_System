@@ -23,7 +23,7 @@ public class UserProfile {
     private Long phoneNo;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "gender", nullable = false)
+    @Column(name = "gender", nullable = false, length = 10)
     private Gender gender;
 
     @Column(name = "address", nullable = false)
@@ -33,9 +33,11 @@ public class UserProfile {
 
     private int experience;
 
+    @Column(length = 50)
     private String specialisation;
 
     @Enumerated(EnumType.STRING)
+    @Column(name = "status", length = 15)
     private DoctorStatus status;
 
     @OneToOne(fetch = FetchType.LAZY , cascade = CascadeType.ALL, mappedBy = "userProfile")
