@@ -9,10 +9,10 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 @WebServlet(urlPatterns="/Doclogin")
-public class Doclogin extends HttpServlet {
+public class Doctorlogin extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    public Doclogin() {
+    public Doctorlogin() {
         super();
     }
 
